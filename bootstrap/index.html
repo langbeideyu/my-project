@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>重庆的味道</title>
+		<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<!-- js和bootstrap文件 -->
+		<script src="js/jquery.min.js"></script>
+		<!-- css文件 -->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+
+		<!--//动画-->
+		<script src="js/wow.min.js"></script>
+		<script>
+			new WOW().init(); //动画
+		</script>
+		<!--/animated-css-->
+
+	</head>
+
+	<body>
+		<!---->
+		<div class="banner">
+			<div class="container">
+				<div class="header">
+					<div class="logo wow fadeInLeft" data-wow-delay="0.5s">
+						<a href="index.html"><img src="images/logo2.png" alt="" /></a>
+					</div>
+					<!-- -------------------------------------------------------------------- -->
+
+					<script src="../public/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+					<script type="text/javascript">
+						$.ajax({
+							type: "get",
+							url: "http://localhost/project/index.php?class=User&action=session",
+							success: function(res) {
+
+								if(res == "") {
+									$(".bian").append("请登录");
+								} else {
+									$(".bian").append(res);
+								}
+							}
+						});
+						$(document).ready(function() {
+							$.ajax({
+								type: "get",
+								url: "http://localhost/project/index.php?class=User&action=session",
+								success: function(res) {
+									console.log(res);
+									if(res != "") {
+										$("#denglu").css("display", "none");
+										$("#zhuce").css("display", "none");
+									}
+								}
+							});
+						})
+					</script>
+					<!-- !======================================================== -->
+
+					<div class="top-menu">
+
+						<ul>
+							<li class="active">
+								<a href="index.html">首页</a>
+							</li>
+							<li>
+								<a class="scroll" href="#Cusinies">菜肴</a>
+							</li>
+							<li>
+								<a class="scroll" href="#about">关于我们</a>
+							</li>
+							<li>
+								<a class="scroll" href="#Gallery">my-作品</a>
+							</li>
+							<li>
+								<a class="scroll" href="#contact">联系我们</a>
+							</li>
+
+						</ul>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+				<div class="banner-info">
+					<h1>美食--and--调味品</h1>
+					<div class="col-md-6 banner-text wow fadeInRight" data-wow-delay="0.5s">
+						<img src="images/gg.jpg" alt="" />
+						<a class="download hvr-shutter-out-horizontal" href="#">预订购买</a>
+					</div>
+					<div class="col-md-6 banner-form wow fadeInLeft" data-wow-delay="0.5s">
+						<form>
+							<h3>问题反馈</h3>
+							<p>请填写下面的表单</p>
+							<input type="text" placeholder="姓名 *" required/>
+							<input type="text" placeholder="邮箱 *" required/>
+							<input type="text" placeholder="电话 *" required/>
+							<textarea placeholder="备注 *"></textarea>
+							<input type="submit" value="提交信息" />
+						</form>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!---->
+		<div id="Cusinies" class="features">
+			<div class="container">
+				<div class="features-head">
+					<h3>烹饪是一门艺术</h3>
+
+				</div>
+				<div class="features-section">
+					<div class="col-md-6 feature-grid">
+						<img class="wow bounceIn" data-wow-delay="0.4s" src="images/r1.jpg" alt="" />
+						<h3>青椒肉丝</h3>
+						<p>青椒肉丝:味道巴适符合大多重庆人的口味而且也不辣，最重要的是吃得饱，炒的时候我喜欢多放花椒，最好是青椒和红椒一起放颜色更搭配一些，放少量的酱油</p>
+					</div>
+					<div class="col-md-6 feature-grid">
+						<img class="wow bounceIn" data-wow-delay="0.4s" src="images/r2.jpg" alt="" />
+						<h3>重庆煲仔饭</h3>
+						<p>重庆麻辣煲仔饭,刚出炉的堡仔饭千万不要急着吃，经过科学验证和专家的几年研究敢出炉的堡仔饭，吃了唐嘴，最好吹冷了吃，不然嘴巴斗要烫起泡泡.</p>
+					</div>
+					<div class="clearfix">
+						<div class="col-md-6 feature-grid">
+							<img class="wow bounceIn" data-wow-delay="0.4s" src="images/r3.jpg" alt="" />
+							<h3>水煮肉片</h3>
+							<p>水煮肉片:对头就是水煮的，但是放入黑多的胡椒粉麻辣子黑多餐馆都是乱七八糟往里头放入东西，不管三七二十一，去吃水煮肉片的童鞋一定要注意了有可能在里面会吃到虫虫的</p>
+						</div>
+						<div class="col-md-6 feature-grid">
+							<img class="wow bounceIn" data-wow-delay="0.4s" src="images/r4.jpg" alt="" />
+							<h3>牛肉套饭</h3>
+							<p>牛肉套饭-吃多了不消化牛肉我喜欢8分熟-加胡椒粉，巴适得板，不论你在何方都要去告一下老太婆串串香</p>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!---->
+		<div id="about" class="about">
+			<div class="container">
+				<div class="about-top">
+					<div class="col-md-6 about-device wow fadeInLeft" data-wow-delay="0.5s">
+						<img src="images/g2.jpg" alt="" />
+					</div>
+					<div class="col-md-6 about-device-info wow fadeInRight" data-wow-delay="0.5s">
+						<div class="device-text">
+							<h3>体验重庆的味道</h3>
+
+							<p>重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣 -重庆人喜欢辣-重庆人喜欢辣-重庆人喜欢辣-除了辣还是辣. </p>
+						</div>
+						<div class="about-list">
+							<ul>
+								<li>
+									<a href="#"><span class="abt1"></span>重庆小面前十强.</a>
+								</li>
+								<li>
+									<a href="#"><span class="abt2"></span>重庆火锅味道前十强</a>
+								</li>
+								<li>
+									<a href="#"><span class="abt3"></span>重庆最辣的味道在哪</a>
+								</li>
+								<li>
+									<a href="#"><span class="abt4"></span>贝爷挑战重庆最辣火锅</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="about-bottom">
+			<div class="container">
+				<div class="col-md-6 about-customize wow fadeInRight" data-wow-delay="0.5s">
+					<div class="device-text-bottom">
+						<h3>移动手机也可以访问哦</h3>
+
+						<p>手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问-手机访问 -手机访问-手机访问-手机访问-手机访问-手机访问-手机访问 -手机访问-手机访问.
+						</p>
+						<div class="app-dwnld">
+							<a class="app" href="#">下载手机客户端 App</a>
+							<a class="play" href="#"><img src="images/play.png" alt="" /></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 about-device-bottom wow fadeInLeft" data-wow-delay="0.5s">
+					<img src="images/phn2.png" alt="" />
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!---->
+		<script src="js/responsiveslides.min.js"></script>
+		<script>
+			//
+		</script>
+		<!---->
+		<div class="pricing">
+			<div class="container">
+				<div class="pricing-text">
+					<h3>--大牛的评价--</h3>
+
+				</div>
+				<!-- start slider -->
+				<div class="pricing-grids">
+					<div class="slider">
+						<ul class="rslides" id="slider2">
+							<li>
+								<div class="col-md-6 pricing-plans">
+									<p>张三说这个麻辣火锅太辣了特别是海椒董大一个还有酱酱在里头.</p>
+									<div class="pic1">
+										<img src="images/pr1.png" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>王二</h5>
+										<a href="#">某工地搬砖党</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-6 pricing-plans">
+									<p>以前吃了小面都不叫小面重庆小面的确是小，但是好吃</p>
+									<div class="pic1">
+										<img src="images/pr2.png" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>麻子</h5>
+										<a href="#">某工厂员工</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+							<li>
+								<div class="col-md-6 pricing-plans">
+									<p>吃了重庆毛肚治好了我多年的结巴，.</p>
+									<div class="pic1">
+										<img src="images/pr2.png" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>李四</h5>
+										<a href="#">某超市大妈</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-6 pricing-plans">
+									<p>重庆的火锅不好吃，太烫了，嘴巴烫起泡泡了，下次不来吃了要吃也吃冷的火锅</p>
+									<div class="pic1">
+										<img src="images/m2.jpg" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>印度阿三</h5>
+										<a href="#">开火车的阿三</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+							<li>
+								<div class="col-md-6 pricing-plans">
+									<p>我是一名程序员我对于这个重庆味道已经。。。。我还是喜欢朝天门去打哈望</p>
+									<div class="pic1">
+										<img src="images/m1.jpg" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>黄某</h5>
+										<a href="#">出任ceo，迎娶白富美，从此走上人生巅峰</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-6 pricing-plans">
+									<p>我是一名程序员我对于这个重庆味道已经。。。。我还是喜欢朝天门去打哈望.</p>
+									<div class="pic1">
+										<img src="images/pr1.png" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>黄某</h5>
+										<a href="#">出任ceo，迎娶白富美，从此走上人生巅峰</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+							<li>
+								<div class="col-md-6 pricing-plans">
+									<p>曾经的我很辉煌很高冷-只从吃了麻辣火锅人都不好了.</p>
+									<div class="pic1">
+										<img src="images/pr2.png" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>海归</h5>
+										<a href="#">某海归到重庆吃了火锅</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="col-md-6 pricing-plans">
+									<p>我喜欢重庆太阳坝坝下头吃火锅，我感觉重庆味道不辣，重庆妹儿还可以，</p>
+									<div class="pic1">
+										<img src="images/m2.jpg" alt="" />
+									</div>
+									<div class="pic-info">
+										<h5>非洲大牛</h5>
+										<a href="#">永远晒不黑，晒不黑的我</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+								<div class="clearfix"></div>
+							</li>
+						</ul>
+					</div>
+					<!-- end slider -->
+				</div>
+			</div>
+		</div>
+		<!---->
+
+		<div id="Gallery" class="content">
+			<div class="container">
+				<div class="gallery-head">
+					<h3>购买</h3>
+				</div>
+				<div class="gallery-top">
+					<div class="gallery">
+						<ul>
+							<li class="wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r11.jpg"><img src="images/r11.jpg" alt="" /></a>
+								<h3>套餐一</h3>
+							</li>
+							<li class="wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r22.jpg"><img src="images/r22.jpg" /></a>
+								<h3>套餐二</h3>
+							</li>
+							<li class="wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r33.jpg"><img src="images/r33.jpg" /></a>
+								<h3>套餐三</h3>
+							</li>
+							<li class="last wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r44.jpg"><img src="images/r44.jpg" /></a>
+								<h3>套餐四</h3>
+							</li>
+
+							<li class="wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r55.jpg"><img src="images/r55.jpg" /></a>
+								<h3>套餐五</h3>
+							</li>
+							<li class="wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r66.jpg"><img src="images/r66.jpg" /></a>
+								<h3>套餐六</h3>
+							</li>
+							<li class="wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r77.jpg"><img src="images/r77.jpg" /></a>
+								<h3>套餐七</h3>
+							</li>
+							<li class="last wow bounceIn" data-wow-delay="0.5s">
+								<a href="images/r11.jpg"><img src="images/r11.jpg" /></a>
+								<h3>套餐8</h3>
+							</li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="contact" class="contact">
+			<div class="container">
+				<div class="contact-text">
+					<h3>联系我们</h3>
+					<span></span>
+				</div>
+				<div class="contact-grids">
+					<div class="col-md-4 contact-grid text-center wow bounceIn" data-wow-delay="0.4s">
+						<div class="icon1"></div>
+						<p>电话: (400) 124-5678</p>
+						<p>座机: (400) 123-8290</p>
+					</div>
+					<div class="col-md-4 contact-grid text-center wow bounceIn" data-wow-delay="0.4s">
+						<div class="icon2"></div>
+						<p>1001 哈哈哈.</p>
+						<p>速度 1900</p>
+						<p>编号, FL 33131</p>
+					</div>
+					<div class="col-md-4 contact-grid text-center wow bounceIn" data-wow-delay="0.4s">
+						<div class="icon3"></div>
+						<a href="mailto:example.com">support@yourname.com</a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<div class="contact-details">
+					<form>
+						<h2 style="margin-top: -20px;">问题反馈</h2>
+						<div class="col-md-6 contact-left">
+							<input type="text" class="text wow fadeInLeft" data-wow-delay="0.4s" value="Name *" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name *';}">
+							<input type="text" class="text wow fadeInLeft" data-wow-delay="0.4s" value="Email *" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email *';}">
+							<input type="text" class="text wow fadeInLeft" data-wow-delay="0.4s" value="Subject *" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject *';}">
+						</div>
+						<div class="col-md-6 contact-right">
+							<textarea class="wow fadeInRight" data-wow-delay="0.4s" value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">MESSAGE *</textarea>
+						</div>
+						<div class="clearfix"></div>
+						<input class="wow fadeInRight" data-wow-delay="0.4s" type="submit" value="SEND MESSAGE" />
+					</form>
+				</div>
+			</div>
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.1651928596452!2d-80.18708473414607!3d25.765106655121123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b42909d18c97%3A0x97689362b4db9e7e!2sBrickell+Park!5e0!3m2!1sen!2sin!4v1425979652981" frameborder="0" style="border:0"></iframe>
+			</div>
+		</div>
+		<!---->
+		<div class="footer text-center">
+			<div class="container">
+				<a class="wow bounceIn" data-wow-delay="0.5s" href="index.html"><img src="images/logo2.png" alt="" /></a>
+				<p class="wow bounceIn" data-wow-delay="0.4s">Copyright &copy; 2016-6-06.重庆味道好公司
+					<a target="_blank" href="http://sc.chinaz.com/moban/"></a>
+				</p>
+
+				<a href="#to-top" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+				<!---->
+
+	</body>
+
+</html>

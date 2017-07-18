@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>个人主页</title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			body {
+				overflow: hidden;
+			}
+			
+			#bg {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#bg .bg-div {
+				width: 100%;
+				height: 100%;
+			}
+			
+			#header {
+				width: 100%;
+				height: 50px;
+				position: fixed;
+				top: 25px;
+			}
+			
+			#header .h-logo {
+				width: 220px;
+				height: 50px;
+				margin-left: 55px;
+				line-height: 50px;
+				float: left;
+			}
+			
+			#header .h-logo img {
+				display: block;
+				/*防止空隙产生*/
+			}
+			
+			#header .h-nav {
+				width: 400px;
+				height: 50px;
+				float: right;
+				margin-right: 55px;
+				position: relative;
+			}
+			
+			#header .h-nav li {
+				list-style: none;
+				float: left;
+				line-height: 50px;
+				margin-left: 50px;
+			}
+			
+			#header .h-nav li a {
+				color: rgba(255, 255, 255, .8);
+				text-decoration: none;
+				font-size: 16px;
+				font-family: "微软雅黑";
+			}
+			
+			#header .h-nav #box {
+				width: 55px;
+				height: 32px;
+				border: 1px solid rgba(255, 255, 255, .8);
+				border-radius: 16px;
+				position: absolute;
+				top: 9px;
+				left: 40px;
+				z-index: -99;
+			}
+			
+			#aside {
+				width: 100px;
+				height: 330px;
+				position: fixed;
+				left: 55px;
+				top: 55%;
+				margin-top: -165px;
+				background: url(img/nav.png) no-repeat;
+				padding-top: 6px;
+			}
+			
+			#aside ul li {
+				list-style: none;
+				font-size: 12px;
+				color: rgba(255, 255, 255, .8);
+				font-family: "微软雅黑";
+				padding-left: 50px;
+				/*background: url(http://p4.qhimg.com/d/inn/e9a3c8a4/nav_cur.png) no-repeat;*/
+				line-height: 21px;
+				margin-bottom: 56px;
+			}
+			
+			#aside ul li.on {
+				background: url(img/nav_cur.png) no-repeat;
+			}
+			
+			#bg #div1 {
+				width: 100px;
+				height: 100px;
+				display: none;
+			}
+			
+			#bg #div2 {
+				width: 100px;
+				height: 100px;
+				display: none;
+			}
+			
+			#bg #div3 {
+				width: 100px;
+				height: 100px;
+				display: none;
+			}
+			
+			#bg .e2 {
+				width: 20%;
+				height: 35%;
+				display: inline-block;
+				float: left;
+				margin-left: 10%;
+				display: none;
+				overflow: hidden;
+				text-align: center;
+			}
+			
+			#bg #zhanshi {
+				width: 90%;
+				height: 90%;
+				margin: auto;
+				margin-top: 100px;
+			}
+			
+			#bg #zhanshi img {
+				width: 100%;
+				height: 88%;
+				transition: 1s;
+			}
+			
+			#bg #zhanshi img:hover {
+				transform: scaleX(1.5);
+			}
+			
+			#bg .bg1-min {
+				width: 50%;
+				height: 40%;
+				background-color: #333333;
+				margin-top: 13%;
+				margin-left: 25%;
+				opacity: 0.8;
+			}
+			
+			#bg .bg3-last1 {
+				width: 25%;
+				height: 220px;
+				background-color: dodgerblue;
+				opacity: 0.8;
+				float: left;
+				margin-top: 10%;
+				margin-left: 25%;
+				overflow: hidden;
+			}
+			
+			#bg .bg3-last2 {
+				width: 25%;
+				height: 220px;
+				background-color: #333333;
+				opacity: 0.8;
+				float: left;
+				margin-top: 10%;
+				margin-left: 10px;
+				overflow: hidden;
+			}
+			
+			#bg .bg3-last3 {
+				width: 25%;
+				height: 220px;
+				background-color: #333333;
+				opacity: 0.8;
+				float: left;
+				margin-top: 10px;
+				margin-left: 25%;
+				overflow: hidden;
+			}
+			
+			#bg .bg3-last4 {
+				width: 25%;
+				height: 220px;
+				background-color: dodgerblue;
+				opacity: 0.8;
+				float: left;
+				margin-top: 10px;
+				margin-left: 10px;
+				overflow: hidden;
+			}
+			
+			#bg .dd {
+				clear: both;
+			}
+			
+			#bg .pre-font {
+				font-size: 14px;
+				font-family: "微软雅黑";
+				color: white;
+			}
+			
+			#bg #tt img {
+				transition: 2s;
+			}
+			
+			#bg #tt img:hover {
+				transform: rotateY(360deg);
+				-webkit-transform: rotateY(360deg);
+				/* Safari 和 Chrome */
+				-moz-transform: rotateY(360deg);
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!--顶部导航区-->
+
+		<!--背景图片区-->
+		<div id="bg">
+			<div class="bg-div" id="lunbo">
+				<div id="header">
+					<div class="h-logo">
+						<h1>欢迎您访问</h1>
+					</div>
+					<div class="h-nav">
+						<ul>
+							<li>
+								<a href="">首页</a>
+							</li>
+							<li>
+								<a href="#001">介绍</a>
+							</li>
+							<li>
+								<a href="#002" id="diandian">作品</a>
+							</li>
+							<li>
+								<a href="#003">技能</a>
+							</li>
+						</ul>
+						<div id="box"></div>
+					</div>
+				</div>
+				<div>&nbsp;</div>
+				<div style="margin-top: 15%;margin-left: 40%;" id="tt">
+					<img src="img/shaui.jpg" style=" width: 200px; height: 200px;border-radius: 100px;" />
+					<h1 style=" width: 320px; margin-left: -40px;">welcome your visit</h1>
+				</div>
+			</div>
+			<div class="bg-div" style="background: url(img/007.jpg); background-attachment: fixed; background-position: center;">
+				<div>
+					夏天的静谧
+				</div>
+				<div class="bg1-min">
+					<span id="" style="color: white; font-size: 16px;"><pre>
+							
+  姓    名： 黄平  				    	性    别：男
+
+  出生年月：1993.08					联系电话：13996496749
+
+  学    历：专科					专    业：软件开发
+
+  民    族：苗族					毕业学校：重庆工程学院
+
+  住    址：重庆市茶园金科中央御园52-12-8
+
+  电子信箱：588579641@qq.com      	个人网站：lovecxf.win
+</pre>
+						</span>
+				</div>
+			</div>
+			<div class="bg-div" style="background: url(img/04.jpg); background-attachment: fixed; background-position: center;">
+				<div id="my">
+					海底蓝
+				</div>
+				<div id="zhanshi">
+					<div id="e1" class="e2">
+						<a href="texiao.html"><img src="img/shoufengqin.jpg" /></a>常见的网页特效</div>
+
+					<div id="e2" class="e2">
+						<a href="bootstrap/index.html"><img src="img/xiangyinshi.jpg" /></a>响应式布局</div>
+					<a name="001"></a>
+					<div id="e3" class="e2">
+						<a href="zaoqi.html"><img src="img/zaoqi.jpg" /></a>早期网页</div>
+					<br />
+					<div></div>
+					<div style="margin-top: 30px;" id="e4" class="e2">
+						<a href="xiaomi/index.html"><img src="img/xiaomi.jpg" /></a>仿小米商城</div>
+					<div style="margin-top: 30px;" id="e5" class="e2">
+						<a href="simulate LOL slideshow/lol.html"><img src="img/loding.jpg" /></a>待上传...</div>
+					<div style="margin-top: 30px;" id="e6" class="e2">
+						<a href="All css Floating Button/hahaa.html"><img src="img/loding.jpg" /></a>待上传...</div>
+
+				</div>
+			</div>
+			<div class="bg-div" style="background: url(img/last-bg.jpg); background-attachment: fixed; background-position: center;">
+				<div>天空灰</div>
+				<div class="bg3-last1">
+					<pre class="pre-font">
+						
+ 工作经验：
+	时间：2014-10-2016-07
+	公司：中企动力科技股份有限公司（重庆分公司）
+	介绍：主要从事电子商务工作
+	
+	时间：2017.01-2017.05	
+	公司：重庆浩奇海科技有限公司
+	介绍：程序开发
+
+</pre>
+				</div>
+				<div class="bg3-last2">
+					<pre class="pre-font">
+ 专业技能：
+ 	1.熟悉HTML5/HTML、CSS3/CSS、JavaScript
+ 	AJAX等前端web网页技术。
+	2.能熟练应用 DIV+CSS 样式布局设计出符合Web2.0的页面
+	能使用原生JavaScript控制网页行为。
+	3.熟练应用PHP+MySQL技术，能在WAMP环境下熟练编程
+	4.能使用Photoshop进行一些简单的图片处理操作
+	5.了解json、xml等技术，并使用到项目中进行数据交互
+框架及设计理念：
+	1.熟悉MVC、三层结构等软件设计模式
+	2.熟悉thinkPHP框架开发网站
+
+
+						</pre>
+				</div>
+				<div class="dd"></div>
+				<div class="bg3-last3">
+					<pre class="pre-font">	
+3.熟练的使用jquery、bootstrap等前端框架
+4.能熟练的使用angular与后台数据进行交互
+
+数据库：
+	1.熟练使用MySQL、SQL Server等关系型数据库
+	并熟练的使用sql语句操作数据。
+	2.在数据库设计和数据操作中，有一定的优化意识
+
+	
+						</pre>
+				</div>
+				<div class="bg3-last4">
+					<pre class="pre-font">
+自我评价：
+	1.性格成熟稳重，擅于沟通，具有积极向上的生活态度；
+	2.有一定的处事能力，具有吃苦耐劳的精神，
+	有一定的组织能力和团队合作精神；
+	3.能够很快的融入群体，愿意尝试实践工作，
+	发挥所长，同时有足够的信心迎接工作的挑战
+
+						</pre>
+				</div>
+
+			</div>
+		</div>
+
+		<!--侧边栏部分-->
+		<div id="aside" style="z-index: 100;">
+			<ul>
+				<li class="on">个人主页</li>
+				<li>个人介绍</li>
+				<li class="dianwo"><span class="dianwo">
+					
+				</span>我的作品</li>
+				<li>技能/工作/评价</li>
+			</ul>
+		</div>
+
+	</body>
+	<script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+	<script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+	<script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//导航栏的移动效果
+		$(function() {
+
+			$(window).load(function() {
+				$('.preloader').delay(1000).fadeOut("slow"); // set duration in brackets    
+			});
+
+			// lunbo
+			$(function() {
+				jQuery(document).ready(function() {
+					$('#bg #lunbo').backstretch([
+						"img/01.jpg",
+						"img/02.jpg",
+						"img/03.jpg"
+
+					], {
+						duration: 2000,
+						fade: 1500
+					});
+				});
+			})
+
+			var timer = setInterval(function() {
+				if($(document).scrollTop()) {
+					$(document).scrollTop(0)
+				} else {
+					clearInterval(timer);
+				}
+			}, 30)
+
+			$("div.h-nav li").mouseover(function() {
+				var width = $(this).width(); //获取当前的宽度
+				var left = $(this).position().left; //获取当前距离副元素位置的左边距离
+
+				$("#box").stop(true).animate({
+					left: left + 36 + "px",
+					width: width + 28 + "px"
+				}, 400);
+
+			});
+			
+			$("#diandian").click(function(){
+				$("#e1").fadeIn(500);
+						$("#e2").fadeIn(2000);
+						$("#e3").fadeIn(4000);
+						$("#e4").fadeIn(6000);
+						$("#e5").fadeIn(8000);
+						$("#e6").fadeIn(10000);
+			})
+			
+			$("#diandian").click(function(){
+				$("#e1").fadeIn(500);
+						$("#e2").fadeIn(2000);
+						$("#e3").fadeIn(4000);
+						$("#e4").fadeIn(6000);
+						$("#e5").fadeIn(8000);
+						$("#e6").fadeIn(10000);
+			})
+			$(".dianwo").click(function(){
+				$("#e1").fadeIn(500);
+						$("#e2").fadeIn(2000);
+						$("#e3").fadeIn(4000);
+						$("#e4").fadeIn(6000);
+						$("#e5").fadeIn(8000);
+						$("#e6").fadeIn(10000);
+			})
+			//当鼠标离开ul时
+			//			$("div.h-nav ul").mouseleave(function() {
+			//				$("#box").stop(true).animate({
+			//					left: '36px',
+			//					width: '60px'
+			//				}, 400);
+			//			});
+			//侧边栏部分-----
+
+			var index = 0;
+			var wH = $(window).height(); //获取窗口的高度
+			$(window).resize(function() {
+				wH = $(window).height();
+				$(document).scrollTop(index * wH);
+			})
+
+			$("#aside li").click(function() {
+				index = $(this).index(); //获取li的索引值
+				$(this).addClass("on").siblings().removeClass("on");
+				$("html,body").stop(true).animate({
+					scrollTop: index * wH //获取每一页的宽度
+				}, 1000);
+			})
+
+			$("#bg .h-nav li").click(function() {
+				index = $(this).index(); //获取li的索引值
+				$(this).addClass("on").siblings().removeClass("on");
+				$("#aside li").eq(index).addClass("on").siblings().removeClass("on");
+				$("html,body").stop(true).animate({
+					scrollTop: index * wH //获取每一页的宽度
+				}, 1000);
+			})
+
+			$(document).mousewheel(function() { //当滚动的时候旁边的点页跟着滚动
+				var dt = arguments[1];
+				if(dt < 0) {
+					index++;
+					if(index==0){
+						$("#box").stop(true).animate({
+							left: '36px',
+							width: '60px'
+						}, 0);
+					}
+					if(index == 1) {
+						$("#box").stop(true).animate({
+							left: '115px',
+							width: '60px'
+						}, 0);
+
+					}
+					if(index == 2) {
+						$("#e1").fadeIn(500);
+						$("#e2").fadeIn(2000);
+						$("#e3").fadeIn(4000);
+						$("#e4").fadeIn(6000);
+						$("#e5").fadeIn(8000);
+						$("#e6").fadeIn(10000);
+						$("#box").stop(true).animate({
+							left: '200px',
+							width: '60px'
+						}, 0);
+
+					}
+					if(index == 3){
+						$("#box").stop(true).animate({
+							left: '280px',
+							width: '60px'
+						}, 0);
+					}
+					if(index > 3)
+					
+						index = 3;
+						
+
+				} else {
+
+					index--;
+					if(index < 0)
+						index = 0;
+
+				}
+
+				$("#aside li").eq(index).addClass("on").siblings().removeClass("on");
+				
+				
+				
+				$("html,body").stop(true).animate({
+
+					scrollTop: index * wH
+				}, 1000);
+
+			})
+
+		});
+	</script>
+
+</html>
